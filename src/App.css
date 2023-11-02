@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins&display=swap');
+
+:root {
+  --bg-clr: #010404;
+  --bg2-clr: rgba(2, 11, 11, 1);
+  --primary-clr:  #712b23;
+  --secondary-clr: #0c2427;
+  --accent-clr: #c3493c;
+  --text-clr: #fbfefe;
+  --disabled: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-clr);
+  color: var(--text-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  font-size: 28px;
+  padding: 0 .5rem;
+  cursor: pointer;
+  transition: .3s color;
+  color: var(--primary-clr);
+  background: none;
+}
+
+button:disabled {
+  color: var(--disabled);
+  cursor: not-allowed;
+}
+
+
+.container {
+  min-width: 500px;
+  max-height: 500px;
+  display: grid;
+  grid-template-rows: 50px 150px 200px;
+  place-items: center;
+  border-radius: 20px;
+  background: var(--bg2-clr);
+  padding: 2rem 1rem;
+  box-shadow: 20px 20px 0px var(--accent-clr)
+}
+
+#title {
+  font-size: 32px;
+}
+
+.break-controls, .session-controls {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+#session-length, #break-length {
+  font-size: 21px;
+}
+
+.break-session-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.break-wrapper, .session-wrapper, .timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+}
+
+.timer-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 24px;
+  width: 200px;
+}
+
+#time-left {
+  font-size: 48px;
+  font-family: 'Barlow', sans-serif;
+  
+}
+
+.timer-controls {
+  display: flex;
+  gap: 2rem;
+}
+
+.color__accent {
+  color: var(--accent-clr);
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    min-width: 300px;
+    box-shadow: 5px 10px 0px var(--accent-clr)
+  }
+  #time-left {
+    font-size: 32px;
+  }
+  .timer {
+    font-size: 16px;
+  }
+  #session-label, #break-label {
+    font-size: 16px;
+  }
+
+}
+
+
+.icon__adjust {
+  width: 28px;
+}
+
